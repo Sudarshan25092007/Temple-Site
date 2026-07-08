@@ -1,0 +1,204 @@
+/* Base Styles & Google Fonts Integration */
+body {
+    background-color: #fcf9f2; /* Soft cream background */
+    font-family: 'Anek Kannada', sans-serif;
+    color: #4a2511; /* Deep dark brown for text readability */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Main Container Card */
+.invitation-container {
+    background-color: #ffffff;
+    max-width: 600px;
+    width: 100%;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    border: 2px solid #e6a84b; /* Subtle gold/saffron border */
+    position: relative;
+}
+
+/* Header Styling */
+.top-chant {
+    font-size: 1rem;
+    color: #d35400; /* Saffron */
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.mantra {
+    font-size: 1.1rem;
+    color: #c0392b; /* Maroon */
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+/* Temple Details */
+.temple-details h2 {
+    font-size: 1.4rem;
+    margin: 5px 0;
+    color: #8e44ad; /* Matching the purple-ish hue in the card logo */
+}
+
+.temple-details h3 {
+    font-size: 1.2rem;
+    margin: 5px 0;
+}
+
+.temple-details p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Event Details Section */
+.event-details {
+    margin: 30px 0;
+    padding: 20px 0;
+    border-top: 1px dashed #e6a84b;
+    border-bottom: 1px dashed #e6a84b;
+}
+
+.panchanga {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+.date {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #d35400;
+    margin: 15px 0;
+}
+
+.event-title {
+    font-size: 2.5rem;
+    color: #c0392b;
+    margin: 10px 0;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.announcement {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* Message Section */
+.message {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 25px 0;
+    padding: 0 20px;
+}
+
+/* Contact Information */
+.contact-info {
+    margin: 25px 0;
+    background-color: #fff9f0;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.contact-heading {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #d35400;
+}
+
+.phone-numbers {
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+
+/* Donation QR Section */
+.donation-section {
+    margin: 20px 0 10px;
+    padding: 18px 12px;
+    background: linear-gradient(135deg, #fff9f0 0%, #fffdf8 100%);
+    border: 1px solid #e6a84b;
+    border-radius: 12px;
+}
+
+.donation-qr {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.donation-link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 190px;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 2px solid #e6a84b;
+    border-radius: 14px;
+    box-shadow: 0 8px 18px rgba(192, 57, 43, 0.12);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.donation-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(192, 57, 43, 0.18);
+}
+
+.donation-qr-image {
+    display: block;
+    width: 100%;
+    max-width: 170px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.donation-qr figcaption {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #c0392b;
+    text-align: center;
+}
+
+/* Footer Styling */
+footer {
+    margin-top: 30px;
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 1.4;
+}
+
+.committee {
+    font-weight: 700;
+    margin-top: 10px;
+    color: #c0392b;
+}
+
+/* Responsive adjust for mobile screens */
+@media (max-width: 480px) {
+    .invitation-container {
+        padding: 20px;
+    }
+    .event-title {
+        font-size: 2rem;
+    }
+    .temple-details h2 {
+        font-size: 1.2rem;
+    }
+    .donation-link {
+        max-width: 170px;
+        padding: 8px;
+    }
+    .donation-qr-image {
+        max-width: 150px;
+    }
+}
