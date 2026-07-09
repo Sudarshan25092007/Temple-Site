@@ -1,204 +1,677 @@
-/* Base Styles & Google Fonts Integration */
+:root {
+  --bg: #f8f2e6;
+  --card: #fffdf8;
+  --card-2: #fff8ef;
+  --maroon: #8f1d1d;
+  --maroon-dark: #6d1212;
+  --saffron: #c76b1c;
+  --gold: #d9a441;
+  --gold-soft: #f4d9a1;
+  --purple: #5b2d8f;
+  --text: #4a2b17;
+  --muted: #6f6255;
+  --line: rgba(170, 114, 38, 0.28);
+  --shadow: 0 12px 35px rgba(64, 30, 8, 0.12);
+  --radius-xl: 24px;
+  --radius-lg: 18px;
+  --radius-md: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-    background-color: #fcf9f2; /* Soft cream background */
-    font-family: 'Anek Kannada', sans-serif;
-    color: #4a2511; /* Deep dark brown for text readability */
-    margin: 0;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(circle at top left, rgba(255, 235, 188, 0.35), transparent 22%),
+    radial-gradient(circle at top right, rgba(255, 228, 188, 0.25), transparent 18%),
+    linear-gradient(180deg, #fffaf1 0%, var(--bg) 55%, #f5ead8 100%);
+  color: var(--text);
+  font-family: "Anek Kannada", sans-serif;
+  min-height: 100vh;
 }
 
-/* Main Container Card */
-.invitation-container {
-    background-color: #ffffff;
-    max-width: 600px;
+.page-shell {
+  width: min(1180px, calc(100% - 28px));
+  margin: 0 auto;
+  padding: 26px 0 40px;
+}
+
+/* language switcher */
+.language-switcher {
+  position: sticky;
+  top: 14px;
+  z-index: 50;
+  margin-left: auto;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(255, 253, 248, 0.92);
+  border: 1px solid rgba(199, 107, 28, 0.24);
+  box-shadow: 0 10px 25px rgba(70, 35, 8, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.lang-label {
+  font-size: 0.92rem;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.language-switcher select {
+  border: 1px solid rgba(199, 107, 28, 0.28);
+  border-radius: 999px;
+  padding: 9px 14px;
+  background: #fff;
+  color: var(--text);
+  font-family: inherit;
+  font-weight: 700;
+  outline: none;
+  cursor: pointer;
+}
+
+/* invitation main card */
+.invitation-card {
+  margin-top: 18px;
+}
+
+.card-inner,
+.detail-card {
+  position: relative;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.98), rgba(255,248,239,0.98));
+  border: 1.5px solid rgba(199, 107, 28, 0.22);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.card-inner {
+  padding: 34px 34px 28px;
+}
+
+/* decorative corners */
+.floral-corners::before,
+.floral-corners::after {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  opacity: 0.25;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 25% 25%, #8ec9ff 0 12%, transparent 13%),
+    radial-gradient(circle at 45% 32%, #6ca9ff 0 8%, transparent 9%),
+    radial-gradient(circle at 62% 22%, #d45353 0 7%, transparent 8%),
+    radial-gradient(circle at 38% 52%, #6abf69 0 6%, transparent 7%),
+    radial-gradient(circle at 68% 50%, #7d3d9b 0 6%, transparent 7%);
+  filter: blur(0.2px);
+}
+
+.floral-corners::before {
+  top: 10px;
+  left: 10px;
+}
+
+.floral-corners::after {
+  right: 10px;
+  bottom: 10px;
+  transform: rotate(180deg);
+}
+
+/* hero */
+.hero-header {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.hero-chant {
+  margin: 0;
+  color: var(--saffron);
+  font-weight: 700;
+  font-size: 1.02rem;
+  letter-spacing: 0.2px;
+}
+
+.hero-mantra {
+  margin: 10px 0 0;
+  color: var(--maroon);
+  font-weight: 800;
+  font-size: 1.08rem;
+}
+
+.trust-block {
+  text-align: center;
+  padding: 8px 0 4px;
+}
+
+.trust-name {
+  margin: 0;
+  color: var(--purple);
+  font-size: clamp(1.4rem, 2.4vw, 2rem);
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.trust-subname {
+  margin: 8px 0 0;
+  color: var(--maroon-dark);
+  font-size: clamp(1.05rem, 2vw, 1.4rem);
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.trust-address {
+  margin: 10px auto 0;
+  max-width: 780px;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.event-highlight {
+  margin: 26px auto 0;
+  padding: 24px 22px;
+  max-width: 920px;
+  text-align: center;
+  border-radius: 22px;
+  background:
+    linear-gradient(180deg, rgba(255, 249, 240, 0.92), rgba(255, 255, 255, 0.9));
+  border: 1px dashed rgba(199, 107, 28, 0.35);
+}
+
+.event-meta {
+  margin: 0 auto 18px;
+  max-width: 850px;
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.title-pill {
+  width: fit-content;
+  margin: 0 auto;
+  padding: 16px 34px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #5b2d8f 0%, #472374 100%);
+  color: #fff;
+  font-family: "Cinzel", serif;
+  font-size: clamp(1.5rem, 4vw, 2.4rem);
+  font-weight: 700;
+  letter-spacing: 1px;
+  box-shadow: 0 10px 24px rgba(91, 45, 143, 0.28);
+  border: 4px solid rgba(255, 255, 255, 0.45);
+}
+
+.event-date {
+  margin: 18px 0 0;
+  color: var(--saffron);
+  font-size: clamp(1.15rem, 2.4vw, 1.55rem);
+  font-weight: 800;
+}
+
+/* image sweet spot */
+.hero-image-section {
+  margin-top: 28px;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image-frame {
+  width: min(460px, 100%);
+  padding: 18px;
+  border-radius: 32px;
+  background:
+    radial-gradient(circle at top, rgba(255, 245, 220, 0.9), rgba(255,255,255,0.98) 55%),
+    linear-gradient(180deg, #fffefb, #fff8ef);
+  border: 1px solid rgba(199, 107, 28, 0.2);
+  box-shadow:
+    0 18px 35px rgba(91, 45, 143, 0.12),
+    inset 0 1px 0 rgba(255,255,255,0.9);
+}
+
+.hero-sai-image {
+  width: 100%;
+  display: block;
+  border-radius: 24px;
+  object-fit: cover;
+  max-height: 650px;
+}
+
+/* invitation message */
+.invitation-panel {
+  margin-top: 28px;
+  padding: 24px;
+  border-radius: 22px;
+  background: linear-gradient(180deg, rgba(255,250,242,0.96), rgba(255,255,255,0.96));
+  border: 1px solid rgba(199, 107, 28, 0.18);
+}
+
+.section-title {
+  margin: 0 0 14px;
+  color: var(--maroon);
+  text-align: center;
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+
+.invitation-message p {
+  margin: 0;
+  font-size: 1.08rem;
+  line-height: 1.95;
+  text-align: center;
+}
+
+.invitation-message strong {
+  color: var(--maroon);
+}
+
+/* action buttons */
+.quick-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.action-btn {
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 800;
+  padding: 14px 22px;
+  border-radius: 999px;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, background 0.22s ease;
+}
+
+.action-btn:hover {
+  transform: translateY(-2px);
+}
+
+.action-primary {
+  background: linear-gradient(135deg, var(--maroon), var(--maroon-dark));
+  color: #fff;
+  box-shadow: 0 10px 24px rgba(143, 29, 29, 0.22);
+}
+
+.action-secondary {
+  background: linear-gradient(135deg, #fff5e9, #fff);
+  color: var(--saffron);
+  border: 1px solid rgba(199, 107, 28, 0.25);
+}
+
+.action-outline {
+  background: transparent;
+  color: var(--purple);
+  border: 1px solid rgba(91, 45, 143, 0.24);
+}
+
+/* details wrapper */
+.details-wrapper {
+  display: grid;
+  gap: 24px;
+  margin-top: 28px;
+}
+
+.detail-card {
+  padding: 28px;
+}
+
+.detail-card-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.detail-card-header h3 {
+  margin: 0;
+  color: var(--maroon);
+  font-size: clamp(1.3rem, 2vw, 1.8rem);
+  font-weight: 800;
+}
+
+.detail-card-header p {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+/* temple section */
+.temple-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 22px;
+  align-items: stretch;
+}
+
+.temple-image-card {
+  background: #fff;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(199, 107, 28, 0.16);
+  box-shadow: 0 12px 30px rgba(70, 35, 8, 0.08);
+}
+
+.temple-image {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+.temple-side-content {
+  display: grid;
+  gap: 16px;
+}
+
+.info-box {
+  background: linear-gradient(180deg, rgba(255,249,241,0.95), rgba(255,255,255,0.95));
+  border: 1px solid rgba(199, 107, 28, 0.15);
+  border-radius: 18px;
+  padding: 18px;
+}
+
+.info-box h4 {
+  margin: 0 0 8px;
+  color: var(--saffron);
+  font-size: 1.05rem;
+}
+
+.info-box p {
+  margin: 0;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+/* bilingual section */
+.bilingual-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.lang-panel {
+  background: linear-gradient(180deg, rgba(255,249,241,0.95), rgba(255,255,255,0.95));
+  border: 1px solid rgba(199, 107, 28, 0.15);
+  border-radius: 18px;
+  padding: 20px;
+}
+
+.lang-panel h4 {
+  margin: 0 0 12px;
+  color: var(--purple);
+  font-size: 1.2rem;
+}
+
+.lang-panel p {
+  margin: 0;
+  line-height: 1.95;
+  font-size: 1.02rem;
+}
+
+/* donation */
+.donation-grid {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 24px;
+  align-items: center;
+}
+
+.qr-box {
+  background: linear-gradient(180deg, #fffaf3, #fff);
+  border: 1px solid rgba(199, 107, 28, 0.18);
+  border-radius: 22px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 10px 24px rgba(70, 35, 8, 0.08);
+}
+
+.qr-image {
+  width: 100%;
+  max-width: 210px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 14px;
+  background: #fff;
+  padding: 8px;
+  border: 1px solid rgba(199, 107, 28, 0.15);
+}
+
+.qr-caption {
+  margin: 12px 0 0;
+  color: var(--maroon);
+  font-weight: 700;
+}
+
+.donation-content {
+  display: grid;
+  gap: 16px;
+}
+
+.upi-box,
+.bank-note {
+  background: linear-gradient(180deg, rgba(255,249,241,0.95), rgba(255,255,255,0.95));
+  border: 1px solid rgba(199, 107, 28, 0.15);
+  border-radius: 18px;
+  padding: 20px;
+}
+
+.upi-box h4 {
+  margin: 0 0 8px;
+  color: var(--saffron);
+  font-size: 1.05rem;
+}
+
+.upi-id {
+  margin: 0 0 14px;
+  font-size: 1.08rem;
+  font-weight: 800;
+  color: var(--purple);
+  word-break: break-word;
+}
+
+.upi-button {
+  display: inline-block;
+  text-decoration: none;
+  background: linear-gradient(135deg, var(--maroon), var(--maroon-dark));
+  color: #fff;
+  font-weight: 800;
+  padding: 13px 20px;
+  border-radius: 999px;
+  box-shadow: 0 10px 24px rgba(143, 29, 29, 0.22);
+}
+
+.upi-note,
+.bank-note p {
+  margin: 14px 0 0;
+  line-height: 1.8;
+  color: var(--muted);
+}
+
+/* contact */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.contact-pill {
+  text-decoration: none;
+  text-align: center;
+  background: linear-gradient(180deg, #fffaf2, #fff);
+  border: 1px solid rgba(199, 107, 28, 0.18);
+  border-radius: 16px;
+  padding: 14px 10px;
+  color: var(--text);
+  font-weight: 800;
+  box-shadow: 0 8px 20px rgba(70, 35, 8, 0.06);
+  transition: transform 0.2s ease;
+}
+
+.contact-pill:hover {
+  transform: translateY(-2px);
+}
+
+.committee-box {
+  text-align: center;
+  background: linear-gradient(180deg, rgba(255,249,241,0.95), rgba(255,255,255,0.95));
+  border: 1px solid rgba(199, 107, 28, 0.15);
+  border-radius: 18px;
+  padding: 20px;
+}
+
+.committee-box p {
+  margin: 8px 0;
+  line-height: 1.7;
+}
+
+.committee-line {
+  color: var(--maroon);
+  font-weight: 800;
+}
+
+/* footer */
+.site-footer {
+  margin-top: 22px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 8px 0 0;
+}
+
+/* utility */
+.hidden {
+  display: none !important;
+}
+
+/* print */
+@media print {
+  body {
+    background: #fff;
+  }
+
+  .language-switcher,
+  .quick-actions {
+    display: none !important;
+  }
+
+  .page-shell {
     width: 100%;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    text-align: center;
-    border: 2px solid #e6a84b; /* Subtle gold/saffron border */
-    position: relative;
-}
-
-/* Header Styling */
-.top-chant {
-    font-size: 1rem;
-    color: #d35400; /* Saffron */
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
-.mantra {
-    font-size: 1.1rem;
-    color: #c0392b; /* Maroon */
-    font-weight: 700;
-    margin-bottom: 25px;
-}
-
-/* Temple Details */
-.temple-details h2 {
-    font-size: 1.4rem;
-    margin: 5px 0;
-    color: #8e44ad; /* Matching the purple-ish hue in the card logo */
-}
-
-.temple-details h3 {
-    font-size: 1.2rem;
-    margin: 5px 0;
-}
-
-.temple-details p {
-    font-size: 1rem;
-    color: #555;
-    margin-bottom: 30px;
-}
-
-/* Event Details Section */
-.event-details {
-    margin: 30px 0;
-    padding: 20px 0;
-    border-top: 1px dashed #e6a84b;
-    border-bottom: 1px dashed #e6a84b;
-}
-
-.panchanga {
-    font-size: 0.95rem;
-    color: #555;
-    line-height: 1.5;
-}
-
-.date {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: #d35400;
-    margin: 15px 0;
-}
-
-.event-title {
-    font-size: 2.5rem;
-    color: #c0392b;
-    margin: 10px 0;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-}
-
-.announcement {
-    font-size: 1.1rem;
-    font-weight: 600;
-}
-
-/* Message Section */
-.message {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin: 25px 0;
-    padding: 0 20px;
-}
-
-/* Contact Information */
-.contact-info {
-    margin: 25px 0;
-    background-color: #fff9f0;
-    padding: 15px;
-    border-radius: 8px;
-}
-
-.contact-heading {
-    font-weight: 600;
-    margin-bottom: 5px;
-    color: #d35400;
-}
-
-.phone-numbers {
-    font-weight: 700;
-    font-size: 1.1rem;
-    letter-spacing: 0.5px;
-}
-
-/* Donation QR Section */
-.donation-section {
-    margin: 20px 0 10px;
-    padding: 18px 12px;
-    background: linear-gradient(135deg, #fff9f0 0%, #fffdf8 100%);
-    border: 1px solid #e6a84b;
-    border-radius: 12px;
-}
-
-.donation-qr {
     margin: 0;
-    display: flex;
+    padding: 0;
+  }
+
+  .card-inner,
+  .detail-card {
+    box-shadow: none;
+    border: 1px solid #d8c39b;
+    break-inside: avoid;
+  }
+}
+
+/* responsive */
+@media (max-width: 1024px) {
+  .temple-grid,
+  .donation-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .page-shell {
+    width: min(100%, calc(100% - 18px));
+    padding-top: 18px;
+  }
+
+  .card-inner,
+  .detail-card {
+    padding: 22px 16px;
+    border-radius: 20px;
+  }
+
+  .hero-mantra {
+    font-size: 1rem;
+  }
+
+  .event-highlight {
+    padding: 18px 14px;
+  }
+
+  .title-pill {
+    padding: 14px 24px;
+    font-size: 1.25rem;
+  }
+
+  .invitation-message p,
+  .lang-panel p,
+  .info-box p,
+  .upi-note,
+  .bank-note p {
+    line-height: 1.8;
+    font-size: 1rem;
+  }
+
+  .bilingual-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .quick-actions {
     flex-direction: column;
-    align-items: center;
-    gap: 10px;
-}
+  }
 
-.donation-link {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
+  .action-btn,
+  .upi-button {
     width: 100%;
-    max-width: 190px;
-    padding: 10px;
-    background-color: #ffffff;
-    border: 2px solid #e6a84b;
-    border-radius: 14px;
-    box-shadow: 0 8px 18px rgba(192, 57, 43, 0.12);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.donation-link:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 22px rgba(192, 57, 43, 0.18);
-}
-
-.donation-qr-image {
-    display: block;
-    width: 100%;
-    max-width: 170px;
-    height: auto;
-    border-radius: 8px;
-}
-
-.donation-qr figcaption {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #c0392b;
     text-align: center;
+  }
 }
 
-/* Footer Styling */
-footer {
-    margin-top: 30px;
+@media (max-width: 520px) {
+  .language-switcher {
+    position: static;
+    margin: 0 0 14px auto;
+  }
+
+  .hero-chant {
+    font-size: 0.92rem;
+    line-height: 1.6;
+  }
+
+  .hero-mantra {
+    line-height: 1.6;
+  }
+
+  .trust-address {
     font-size: 0.95rem;
-    color: #333;
-    line-height: 1.4;
-}
+  }
 
-.committee {
-    font-weight: 700;
-    margin-top: 10px;
-    color: #c0392b;
-}
+  .event-meta {
+    font-size: 0.94rem;
+  }
 
-/* Responsive adjust for mobile screens */
-@media (max-width: 480px) {
-    .invitation-container {
-        padding: 20px;
-    }
-    .event-title {
-        font-size: 2rem;
-    }
-    .temple-details h2 {
-        font-size: 1.2rem;
-    }
-    .donation-link {
-        max-width: 170px;
-        padding: 8px;
-    }
-    .donation-qr-image {
-        max-width: 150px;
-    }
+  .hero-image-frame {
+    padding: 12px;
+    border-radius: 22px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
 }
