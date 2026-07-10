@@ -3,16 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ಗುರುಪೂರ್ಣಿಮೆ | Sri Shirdi Sai Baba Mandira Trust, Shivamogga</title>
+  <title>ಗುರುಪೂರ್ಣíme | Shri Shirdi Sai Baba Mandira Trust, Shivamogga</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Kannada:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 </head>
-<body onload="setLang('en')">
+<body onload="setLang('en'); setTheme('dark')">
   <div class="page-shell">
-    <!-- Language Toggle -->
+    <!-- Language & Theme Toggle -->
     <div class="lang-bar">
-      <button class="lang-btn active" data-lang="en" onclick="setLang('en')">English</button>
-      <button class="lang-btn" data-lang="kn" onclick="setLang('kn')">ಕನ್ನಡ</button>
+      <div class="lang-group">
+        <button class="lang-btn active" data-lang="en" onclick="setLang('en')">English</button>
+        <button class="lang-btn" data-lang="kn" onclick="setLang('kn')">ಕನ್ನಡ</button>
+      </div>
+      <div class="theme-group">
+        <button class="theme-btn active" data-theme="dark" onclick="setTheme('dark')">🌙 Dark</button>
+        <button class="theme-btn" data-theme="light" onclick="setTheme('light')">☀️ Light</button>
+      </div>
     </div>
 
     <!-- Invitation Card -->
@@ -28,7 +34,7 @@
           </p>
           <p class="chant-main">
             <span class="txt-kn">|| ಓಂ ಸಾಯಿ ಶ್ರೀ ಸಾಯಿ ಜಯ ಜಯ ಸಾಯಿ ಸದ್ಗುರು ಸಾಯಿ ||</span>
-            <span class="txt-en hidden">|| Om Sai Sri Sai Jaya Jaya Sai Sadguru Sai ||</span>
+            <span class="txt-en hidden">|| Om Sai Shri Sai Jaya Jaya Sai Sadguru Sai ||</span>
           </p>
         </header>
 
@@ -43,7 +49,7 @@
         <section class="trust-block">
           <h2 class="trust-name">
             <span class="txt-kn">ಶ್ರೀ ಶಿರಡಿ ಸಾಯಿಬಾಬಾ ಮಂದಿರ ಟ್ರಸ್ಟ್ (ರಿ.)</span>
-            <span class="txt-en hidden">Sri Shirdi Sai Baba Mandira Trust (R.)</span>
+            <span class="txt-en hidden">Shri Shirdi Sai Baba Mandira Trust (R.)</span>
           </h2>
           <p class="trust-address">
             <span class="txt-kn">ಬಿದಿರೆ ಕ್ರಾಸ್, ಸಾಯಿನಗರ, ಬಿ.ಹೆಚ್. ರಸ್ತೆ, ಶಿವಮೊಗ್ಗ</span>
@@ -78,7 +84,7 @@
         <section class="invitation-body">
           <p>
             <span class="txt-kn">ಶ್ರೀ ಸಾಯಿ ಕೃಪಾಶೀರ್ವಾದದೊಂದಿಗೆ, <strong>ಶ್ರೀ ಶಿರಡಿ ಸಾಯಿಬಾಬಾ ಮಂದಿರ ಟ್ರಸ್ಟ್ (ರಿ.), ಶಿವಮೊಗ್ಗ</strong> ಇವರ ವತಿಯಿಂದ <strong>ಗುರುಪೂರ್ಣಿಮೆ</strong> ಮಹೋತ್ಸವವನ್ನು <strong>ಬುಧವಾರ, ೨೯ ಜುಲೈ ೨೦೨೬</strong> ರಂದು ಹಮ್ಮಿಕೊಳ್ಳಲಾಗಿದೆ. ಸದ್ಭಕ್ತರು ಕುಟುಂಬ ಸಮೇತರಾಗಿ ಭಾಗವಹಿಸಿ, ಶ್ರೀ ಸಾಯಿಬಾಬಾರವರ ಕೃಪಾಶೀರ್ವಾದ ಪಡೆಯುವಂತೆ ವಿನಂತಿಸಿಕೊಳ್ಳುತ್ತೇವೆ.</span>
-            <span class="txt-en hidden">With the divine blessings of Sri Sai, <strong>Sri Shirdi Sai Baba Mandira Trust (R.), Shivamogga</strong> cordially invites devotees, relatives, and well-wishers to the <strong>Guru Purnima</strong> celebration on <strong>Wednesday, 29 July 2026</strong>. Please grace the occasion with your family and receive the blessings of Shri Sai Baba.</span>
+            <span class="txt-en hidden">With the divine blessings of Shri Sai, <strong>Shri Shirdi Sai Baba Mandira Trust (R.), Shivamogga</strong> cordially invites devotees, relatives, and well-wishers to the <strong>Guru Purnima</strong> celebration on <strong>Wednesday, 29 July 2026</strong>. Please grace the occasion with your family and receive the blessings of Shri Sai Baba.</span>
           </p>
         </section>
 
@@ -143,6 +149,13 @@
       document.querySelectorAll('.txt-kn').forEach(el => el.classList.toggle('hidden', lang !== 'kn'));
       document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.classList.toggle('active', btn.dataset.lang === lang);
+      });
+    }
+
+    function setTheme(theme) {
+      document.body.classList.toggle('light-theme', theme === 'light');
+      document.querySelectorAll('.theme-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.theme === theme);
       });
     }
   </script>
