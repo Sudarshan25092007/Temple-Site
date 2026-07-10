@@ -1,365 +1,145 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="kn">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ಗುರುಪೂರ್ಣಿಮೆ | Sri Shirdi Sai Baba Mandira Trust, Shivamogga</title>
-
-    <link rel="stylesheet" href="style.css" />
-
-    <!-- Kannada + English fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Anek+Kannada:wght@300;400;500;600;700;800&family=Cinzel:wght@500;600;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div class="page-shell">
-      <!-- Floating language switch -->
-      <div class="language-switcher">
-        <label for="langSelect" class="lang-label">Language</label>
-        <select id="langSelect" aria-label="Select language">
-          <option value="kn">ಕನ್ನಡ</option>
-          <option value="en">English</option>
-        </select>
-      </div>
-
-      <!-- ========================= -->
-      <!-- HERO INVITATION CARD -->
-      <!-- ========================= -->
-      <main class="invitation-card">
-        <div class="card-inner floral-corners">
-          <!-- top chant -->
-          <header class="hero-header">
-            <p class="hero-chant">
-              <span class="lang-kn"
-                >ಶ್ರದ್ಧಾ &nbsp; • &nbsp; ಓಂ ಶ್ರೀ ಸಾಯಿರಾಂ &nbsp; • &nbsp;
-                ಸಬುರಿ</span
-              >
-              <span class="lang-en hidden"
-                >Shraddha &nbsp; • &nbsp; Om Sri Sai Ram &nbsp; • &nbsp;
-                Saburi</span
-              >
-            </p>
-
-            <p class="hero-mantra">
-              <span class="lang-kn"
-                >|| ಓಂ ಸಾಯಿ ಶ್ರೀ ಸಾಯಿ ಜಯ ಜಯ ಸಾಯಿ ಸದ್ಗುರು ಸಾಯಿ ||</span
-              >
-              <span class="lang-en hidden"
-                >|| Om Sai Sri Sai Jaya Jaya Sai Sadguru Sai ||</span
-              >
-            </p>
-          </header>
-
-          <!-- Trust details -->
-          <section class="trust-block">
-            <h2 class="trust-name">
-              <span class="lang-kn"
-                >ಶ್ರೀ ಶಿರಡಿ ಸಾಯಿಬಾಬಾ ಮಂದಿರ ಟ್ರಸ್ಟ್ (ರಿ.)</span
-              >
-              <span class="lang-en hidden"
-                >Sri Shirdi Sai Baba Mandira Trust (R.)</span
-              >
-            </h2>
-
-            <!-- <h3 class="trust-subname">
-              <span class="lang-kn">ಶ್ರೀ ಶಿರಡಿ ಸಾಯಿಬಾಬಾ ಮಂದಿರ ಟ್ರಸ್ಟ್, ಶಿವಮೊಗ್ಗ</span>
-              <span class="lang-en hidden">Sri Shirdi Sai Baba Mandira Trust, Shivamogga</span>
-            </h3> -->
-
-            <p class="trust-address">
-              <span class="lang-kn"
-                >ಬಿದಿರೆ ಕ್ರಾಸ್, ಸಾಯಿನಗರ, ಬಿ.ಹೆಚ್. ರಸ್ತೆ, ಶಿವಮೊಗ್ಗ</span
-              >
-              <span class="lang-en hidden"
-                >Bidare Cross, Sai Nagara, B.H. Road, Shivamogga</span
-              >
-            </p>
-          </section>
-
-          <!-- Event title -->
-          <section class="event-highlight">
-            <p class="event-meta">
-              <span class="lang-kn">
-                ಸ್ವಸ್ತಿ ಶ್ರೀ ವಿಜಯಾಭ್ಯುದಯ ಶಾಲಿವಾಹನ ಶಕ, ಶ್ರೀ ಪರಾಭವ ನಾಮ ಸಂವತ್ಸರದ
-                ದಕ್ಷಿಣಾಯನ ಆಷಾಢಮಾಸ ಶುಕ್ಲ ಪಕ್ಷ ಹುಣ್ಣಿಮೆ ದಿನ
-              </span>
-              <span class="lang-en hidden">
-                On the auspicious Full Moon day of Ashadha month in the sacred
-                Guru Purnima observance
-              </span>
-            </p>
-
-            <div class="title-pill">
-              <span class="lang-kn">ಗುರುಪೂರ್ಣಿಮೆ</span>
-              <span class="lang-en hidden">GURU PURNIMA</span>
-            </div>
-
-            <p class="event-date">
-              <span class="lang-kn">29-07-2026ನೇ ಬುಧವಾರ</span>
-              <span class="lang-en hidden">Wednesday, 29 July 2026</span>
-            </p>
-          </section>
-
-          <!-- Main Sai Baba image sweet spot -->
-          <section class="hero-image-section">
-            <div class="hero-image-frame">
-              <img
-                src="images/front-sai.jpg"
-                alt="Shri Sai Baba"
-                class="hero-sai-image"
-              />
-            </div>
-          </section>
-
-          <!-- Invitation message -->
-          <section class="invitation-message invitation-panel">
-            <h4 class="section-title">
-              <span class="lang-kn">ಆಮಂತ್ರಣ</span>
-              <span class="lang-en hidden">Invitation Details</span>
-            </h4>
-
-            <p class="lang-kn">
-              ಶ್ರೀ ಸಾಯಿ ಕೃಪಾಶೀರ್ವಾದದೊಂದಿಗೆ, ಶ್ರೀ ಶಿರಡಿ ಸಾಯಿಬಾಬಾ ಮಂದಿರ ಟ್ರಸ್ಟ್
-              (ರಿ.), ಶಿವಮೊಗ್ಗ ಇವರ ವತಿಯಿಂದ
-              <strong>ಗುರುಪೂರ್ಣಿಮೆ</strong> ಮಹೋತ್ಸವವನ್ನು
-              <strong>29-07-2026ನೇ ಬುಧವಾರ</strong> ಹಮ್ಮಿಕೊಳ್ಳಲಾಗಿದೆ. ಸದ್ಭಕ್ತರು
-              ಕುಟುಂಬ ಸಮೇತರಾಗಿ ಹೆಚ್ಚಿನ ಸಂಖ್ಯೆಯಲ್ಲಿ ಭಾಗವಹಿಸಿ, ಶ್ರೀ ಸಾಯಿಬಾಬಾರವರ
-              ಕೃಪಾಶೀರ್ವಾದ ಪಡೆಯುವಂತೆ ಆತ್ಮೀಯವಾಗಿ ಕೋರಲಾಗಿದೆ.
-            </p>
-
-            <p class="lang-en hidden">
-              On the sacred occasion of <strong>GURU PURNIMA</strong>, to be
-              observed on <strong>Wednesday, 29 July 2026</strong>, <br />
-              <strong>
-                Sri Shirdi Sai Baba Mandira Trust (R.) Shivamogga </strong
-              >, warmly invite devotees, relatives, and well-wishers to attend
-              the celebration with family, offer prayers, and receive the
-              blessings of Shri Sai Baba.
-              <br />
-            </p>
-          </section>
-
-          <!-- Quick actions -->
-          <section class="quick-actions">
-            <a href="#donate" class="action-btn action-primary">
-              <span class="lang-kn">ದೇಣಿಗೆ</span>
-              <span class="lang-en hidden">Donate</span>
-            </a>
-
-            <a href="#contact" class="action-btn action-secondary">
-              <span class="lang-kn">ಸಂಪರ್ಕ</span>
-              <span class="lang-en hidden">Contact</span>
-            </a>
-
-            <button
-              class="action-btn action-outline"
-              id="printInviteBtn"
-              type="button"
-            >
-              <span class="lang-kn">ಕಾರ್ಡ್ ಮುದ್ರಿಸಿ</span>
-              <span class="lang-en hidden">Save / Print Card</span>
-            </button>
-          </section>
-        </div>
-      </main>
-
-      <!-- ========================= -->
-      <!-- DETAILS SECTION -->
-      <!-- ========================= -->
-      <section class="details-wrapper">
-        <!-- Temple section -->
-        <section class="detail-card temple-showcase floral-corners">
-          <div class="detail-card-header">
-            <h3>
-              <span class="lang-kn">ಶ್ರೀ ಸಾಯಿಬಾಬಾ ಮಂದಿರ</span>
-              <span class="lang-en hidden">Sri Sai Baba Mandir</span>
-            </h3>
-            <p>
-              <span class="lang-kn">ಶ್ರದ್ಧಾ • ಓಂ ಶ್ರೀ ಸಾಯಿರಾಂ • ಸಬುರಿ</span>
-              <span class="lang-en hidden"
-                >Shraddha • Om Sri Sai Ram • Saburi</span
-              >
-            </p>
-          </div>
-
-          <div class="temple-grid">
-            <div class="temple-image-card">
-              <img
-                src="images/temple.jpg"
-                alt="Temple building"
-                class="temple-image"
-              />
-            </div>
-
-            <div class="temple-side-content">
-              <div class="info-box">
-                <h4>
-                  <span class="lang-kn">ಸ್ಥಳ</span>
-                  <span class="lang-en hidden">Location</span>
-                </h4>
-                <p>
-                  <span class="lang-kn">
-                    ಶ್ರೀ ಶಿರಡಿ ಸಾಯಿಬಾಬಾ ಮಂದಿರ ಟ್ರಸ್ಟ್,<br />
-                    ಬಿದಿರೆ ಕ್ರಾಸ್, ಸಾಯಿನಗರ, ಬಿ.ಹೆಚ್. ರಸ್ತೆ,<br />
-                    ಶಿವಮೊಗ್ಗ
-                  </span>
-                  <span class="lang-en hidden">
-                    Sri Shirdi Sai Baba Mandira Trust,<br />
-                    Bidare Cross, Sai Nagara, B.H. Road,<br />
-                    Shivamogga
-                  </span>
-                </p>
-              </div>
-
-              <div class="info-box">
-                <h4>
-                  <span class="lang-kn">ಆಮಂತ್ರಣ</span>
-                  <span class="lang-en hidden">Invitation Note</span>
-                </h4>
-                <p class="lang-kn">
-                  ಸದ್ಭಕ್ತರು ಕುಟುಂಬ ಸಮೇತರಾಗಿ ಬಂದು ಈ ಪವಿತ್ರ ಕಾರ್ಯಕ್ರಮದಲ್ಲಿ
-                  ಭಾಗವಹಿಸಿ, ಶ್ರೀ ಸಾಯಿಬಾಬಾರವರ ಕೃಪಾಶೀರ್ವಾದ ಪಡೆಯುವಂತೆ
-                  ವಿನಂತಿಸಿಕೊಳ್ಳುತ್ತೇವೆ.
-                </p>
-                <p class="lang-en hidden">
-                  Devotees are warmly invited to attend this sacred celebration
-                  with family and seek the blessings of Shri Sai Baba.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Donation -->
-        <section class="detail-card donation-card floral-corners" id="donate">
-          <div class="detail-card-header">
-            <h3>
-              <span class="lang-kn">ದೇಣಿಗೆ / ಸೇವಾ ಸಹಾಯ</span>
-              <span class="lang-en hidden">Donation / Seva Support</span>
-            </h3>
-            <p>
-              <span class="lang-kn"
-                >ಸೇವಾ ಕಾರ್ಯಗಳಿಗೆ ನಿಮ್ಮ ಸಹಕಾರ ಸ್ವಾಗತಾರ್ಹ</span
-              >
-              <span class="lang-en hidden"
-                >Your support for temple seva activities is welcome</span
-              >
-            </p>
-          </div>
-
-          <div class="donation-grid">
-            <div class="qr-box">
-              <img
-                src="images/scanner.jpg"
-                alt="Temple donation QR code"
-                class="qr-image"
-              />
-              <p class="qr-caption">
-                <span class="lang-kn">ಸ್ಕ್ಯಾನ್ ಮಾಡಿ ದೇಣಿಗೆ ನೀಡಿ</span>
-                <span class="lang-en hidden">Scan to donate</span>
-              </p>
-              <br />
-              <div class="upi-box">
-                <h4>UPI</h4>
-                <p class="upi-id">9845732240@sbi</p>
-
-                <a
-                  class="upi-button"
-                  href="upi://pay?pa=9845732240@sbi&pn=SHREE%20SHIRDI%20SAIBABA%20SEVA%20SAMITHI&am=100.00&cu=INR"
-                >
-                  <span class="lang-kn">UPI ಮೂಲಕ ದೇಣಿಗೆ ನೀಡಿ</span>
-                  <span class="lang-en hidden">Donate via UPI</span>
-                </a>
-
-                <p class="upi-note">
-                  <span class="lang-kn">
-                    ನಿಮ್ಮ ಫೋನ್‌ನಲ್ಲಿ UPI ಅಪ್ಲಿಕೇಶನ್ ಇದ್ದರೆ ಮೇಲಿನ ಬಟನ್ ಮೂಲಕ ಪಾವತಿ
-                    ಪ್ರಾರಂಭಿಸಬಹುದು.
-                  </span>
-                  <span class="lang-en hidden">
-                    If a UPI app is installed on your phone, the button above
-                    can open the payment flow.
-                  </span>
-                </p>
-              </div>
-
-              <br />
-
-              <div class="bank-note">
-                <p class="lang-kn">
-                  ಸೂಚನೆ: ಪೋಸ್ಟರ್ / ಸ್ಕ್ರೀನ್‌ಶಾಟ್‌ನಲ್ಲಿ QR ಸ್ಕ್ಯಾನ್ ಮಾಡಬಹುದು.
-                  ವೆಬ್‌ಪುಟದಲ್ಲಿ UPI ಬಟನ್ ಮೂಲಕ ನೇರ ಪಾವತಿ ಪ್ರಯತ್ನಿಸಬಹುದು.
-                </p>
-                <p class="lang-en hidden">
-                  Note: The QR can be scanned from a printed or shared
-                  invitation. On the webpage, you can also try the direct UPI
-                  payment button.
-                </p>
-              </div>
-            </div>
-
-            <div class="donation-content"></div>
-          </div>
-        </section>
-
-        <!-- Contact -->
-        <section class="detail-card contact-card floral-corners" id="contact">
-          <div class="detail-card-header">
-            <h3>
-              <span class="lang-kn">ಹೆಚ್ಚಿನ ವಿವರಗಳಿಗಾಗಿ ಸಂಪರ್ಕಿಸಿ</span>
-              <span class="lang-en hidden">Contact for More Details</span>
-            </h3>
-          </div>
-
-          <div class="contact-grid">
-            <a href="tel:+919845732240" class="contact-pill">98457 32240</a>
-            <a href="tel:+919448767067" class="contact-pill">94487 67067</a>
-            <a href="tel:+917259782240" class="contact-pill">72597 82240</a>
-            <a href="tel:+919945146277" class="contact-pill">99451 46277</a>
-          </div>
-
-          <div class="committee-box">
-            <p>
-              <span class="lang-kn">ಶ್ರೀ ಶಿರಡಿ ಸಾಯಿಬಾಬಾ ಮಂದಿರ ಟ್ರಸ್ಟ್</span>
-              <span class="lang-en hidden"
-                >Sri Shirdi Sai Baba Mandira Trust (R)</span
-              >
-            </p>
-            <p>
-              <span class="lang-kn"
-                >ಶ್ರೀ ಶಿರಡಿ ಸಾಯಿಬಾಬಾ ಮಂದಿರ ಟ್ರಸ್ಟ್, ಶಿವಮೊಗ್ಗ</span
-              >
-              <span class="lang-en hidden"
-                >Sri Shirdi Sai Baba Mandira Trust (R), Shivamogga</span
-              >
-            </p>
-            <p class="committee-line">
-              <span class="lang-kn"
-                >ಅಧ್ಯಕ್ಷರು ಮತ್ತು ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ, ಶಿವಮೊಗ್ಗ</span
-              >
-              <span class="lang-en hidden"
-                >President and Executive Committee, Shivamogga</span
-              >
-            </p>
-          </div>
-        </section>
-      </section>
-
-      <!-- footer -->
-      <footer class="site-footer">
-        <p>
-          <span class="lang-kn"
-            >ಶ್ರೀ ಸಾಯಿಬಾಬಾರವರ ಕೃಪಾಶೀರ್ವಾದ ಸದಾ ನಿಮ್ಮೊಂದಿಗಿರಲಿ</span
-          >
-          <span class="lang-en hidden"
-            >May the blessings of Shri Sai Baba always be with you</span
-          >
-        </p>
-      </footer>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ಗುರುಪೂರ್ಣಿಮೆ | Sri Shirdi Sai Baba Mandira Trust, Shivamogga</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Kannada:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="page-shell">
+    <!-- Language Toggle -->
+    <div class="lang-bar">
+      <button class="lang-btn active" data-lang="kn" onclick="setLang('kn')">ಕನ್ನಡ</button>
+      <button class="lang-btn" data-lang="en" onclick="setLang('en')">English</button>
     </div>
 
-    <script src="script.js"></script>
-  </body>
+    <!-- Invitation Card -->
+    <article class="invitation-card">
+      <div class="card-accent-top"></div>
+
+      <!-- Sai Baba Image -->
+      <section class="hero-image-section">
+        <div class="image-frame">
+          <img src="images/front-sai.jpg" alt="Shri Sai Baba" class="sai-image" />
+        </div>
+      </section>
+
+      <!-- Header Chant -->
+      <header class="card-header">
+        <p class="chant-sub">
+          <span class="txt-kn">ಶ್ರದ್ಧಾ &nbsp;•&nbsp; ಸಬುರಿ</span>
+          <span class="txt-en hidden">Shraddha &nbsp;•&nbsp; Saburi</span>
+        </p>
+        <p class="chant-main">
+          <span class="txt-kn">|| ಓಂ ಸಾಯಿ ಶ್ರೀ ಸಾಯಿ ಜಯ ಜಯ ಸಾಯಿ ಸದ್ಗುರು ಸಾಯಿ ||</span>
+          <span class="txt-en hidden">|| Om Sai Sri Sai Jaya Jaya Sai Sadguru Sai ||</span>
+        </p>
+      </header>
+
+      <!-- Divider -->
+      <div class="ornament-divider">
+        <div class="line"></div>
+        <svg class="star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <div class="line"></div>
+      </div>
+
+      <!-- Trust -->
+      <section class="trust-block">
+        <h2 class="trust-name">
+          <span class="txt-kn">ಶ್ರೀ ಶಿರಡಿ ಸಾಯಿಬಾಬಾ ಮಂದಿರ ಟ್ರಸ್ಟ್ (ರಿ.)</span>
+          <span class="txt-en hidden">Sri Shirdi Sai Baba Mandira Trust (R.)</span>
+        </h2>
+        <p class="trust-address">
+          <span class="txt-kn">ಬಿದಿರೆ ಕ್ರಾಸ್, ಸಾಯಿನಗರ, ಬಿ.ಹೆಚ್. ರಸ್ತೆ, ಶಿವಮೊಗ್ಗ</span>
+          <span class="txt-en hidden">Bidare Cross, Sai Nagara, B.H. Road, Shivamogga</span>
+        </p>
+      </section>
+
+      <!-- Event Title -->
+      <section class="event-banner">
+        <p class="event-subtitle">
+          <span class="txt-kn">ಗುರುಪೂರ್ಣಿಮೆ ಮಹೋತ್ಸವ</span>
+          <span class="txt-en hidden">Guru Purnima Celebration</span>
+        </p>
+        <h1 class="event-title">
+          <span class="txt-kn">ಗುರುಪೂರ್ಣಿಮೆ</span>
+          <span class="txt-en hidden">Guru Purnima</span>
+        </h1>
+        <p class="event-date">
+          <span class="txt-kn">ಬುಧವಾರ, ೨೯ ಜುಲೈ ೨೦೨೬</span>
+          <span class="txt-en hidden">Wednesday, 29 July 2026</span>
+        </p>
+      </section>
+
+      <!-- Invitation Body -->
+      <section class="invitation-body">
+        <p>
+          <span class="txt-kn">ಶ್ರೀ ಸಾಯಿ ಕೃಪಾಶೀರ್ವಾದದೊಂದಿಗೆ, <strong>ಶ್ರೀ ಶಿರಡಿ ಸಾಯಿಬಾಬಾ ಮಂದಿರ ಟ್ರಸ್ಟ್ (ರಿ.), ಶಿವಮೊಗ್ಗ</strong> ಇವರ ವತಿಯಿಂದ <strong>ಗುರುಪೂರ್ಣಿಮೆ</strong> ಮಹೋತ್ಸವವನ್ನು <strong>ಬುಧವಾರ, ೨೯ ಜುಲೈ ೨೦೨೬</strong> ರಂದು ಹಮ್ಮಿಕೊಳ್ಳಲಾಗಿದೆ. ಸದ್ಭಕ್ತರು ಕುಟುಂಬ ಸಮೇತರಾಗಿ ಭಾಗವಹಿಸಿ, ಶ್ರೀ ಸಾಯಿಬಾಬಾರವರ ಕೃಪಾಶೀರ್ವಾದ ಪಡೆಯುವಂತೆ ವಿನಂತಿಸಿಕೊಳ್ಳುತ್ತೇವೆ.</span>
+          <span class="txt-en hidden">With the divine blessings of Sri Sai, <strong>Sri Shirdi Sai Baba Mandira Trust (R.), Shivamogga</strong> cordially invites devotees, relatives, and well-wishers to the <strong>Guru Purnima</strong> celebration on <strong>Wednesday, 29 July 2026</strong>. Please grace the occasion with your family and receive the blessings of Shri Sai Baba.</span>
+        </p>
+      </section>
+
+      <!-- Contact -->
+      <section class="contact-section">
+        <h3 class="section-label">
+          <span class="txt-kn">ಸಂಪರ್ಕ</span>
+          <span class="txt-en hidden">Contact</span>
+        </h3>
+        <div class="contact-grid">
+          <a href="tel:+919845732240" class="contact-pill">98457 32240</a>
+          <a href="tel:+919448767067" class="contact-pill">94487 67067</a>
+          <a href="tel:+917259782240" class="contact-pill">72597 82240</a>
+          <a href="tel:+919945146277" class="contact-pill">99451 46277</a>
+        </div>
+      </section>
+
+      <!-- Donation -->
+      <section class="donation-section">
+        <h3 class="section-label">
+          <span class="txt-kn">ದೇಣಿಗೆ</span>
+          <span class="txt-en hidden">Donation</span>
+        </h3>
+        <p class="upi-id">UPI: <strong>9845732240@sbi</strong></p>
+        <a class="upi-btn" href="upi://pay?pa=9845732240@sbi&pn=SHREE%20SHIRDI%20SAIBABA%20SEVA%20SAMITHI&am=100.00&cu=INR">
+          <span class="txt-kn">UPI ಮೂಲಕ ದೇಣಿಗೆ ನೀಡಿ</span>
+          <span class="txt-en hidden">Donate via UPI</span>
+        </a>
+      </section>
+
+      <!-- Footer -->
+      <footer class="card-footer">
+        <p class="blessing">
+          <span class="txt-kn">ಶ್ರೀ ಸಾಯಿಬಾಬಾರವರ ಕೃಪಾಶೀರ್ವಾದ ಸದಾ ನಿಮ್ಮೊಂದಿಗಿರಲಿ</span>
+          <span class="txt-en hidden">May the blessings of Shri Sai Baba always be with you</span>
+        </p>
+        <p class="committee">
+          <span class="txt-kn">ಅಧ್ಯಕ್ಷರು ಮತ್ತು ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ, ಶಿವಮೊಗ್ಗ</span>
+          <span class="txt-en hidden">President and Executive Committee, Shivamogga</span>
+        </p>
+      </footer>
+
+      <div class="card-accent-bottom"></div>
+    </article>
+
+    <!-- Print -->
+    <div class="print-bar">
+      <button class="print-btn" onclick="window.print()">
+        <span class="txt-kn">🖨️ ಕಾರ್ಡ್ ಮುದ್ರಿಸಿ</span>
+        <span class="txt-en hidden">🖨️ Print / Save Card</span>
+      </button>
+    </div>
+  </div>
+
+  <script>
+    function setLang(lang) {
+      document.querySelectorAll('.txt-kn').forEach(el => el.classList.toggle('hidden', lang !== 'kn'));
+      document.querySelectorAll('.txt-en').forEach(el => el.classList.toggle('hidden', lang !== 'en'));
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.lang === lang);
+      });
+    }
+  </script>
+</body>
 </html>
